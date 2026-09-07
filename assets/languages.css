@@ -1,0 +1,1 @@
+.languages{display:flex;align-items:center;gap:3px}.languages .lang{border:0;background:transparent;border-radius:99px;padding:8px 9px;cursor:pointer;color:var(--muted);font-size:11px}.languages .lang.active{background:var(--ink);color:white}
