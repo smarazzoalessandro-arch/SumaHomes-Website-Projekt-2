@@ -80,3 +80,14 @@
     }
 
 }
+
+@media (max-width: 700px) {
+
+    .header .languages {
+        top: 92px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+}
