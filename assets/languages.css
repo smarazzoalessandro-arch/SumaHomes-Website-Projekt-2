@@ -1,1 +1,82 @@
-.languages{display:flex;align-items:center;gap:3px}.languages .lang{border:0;background:transparent;border-radius:99px;padding:8px 9px;cursor:pointer;color:var(--muted);font-size:11px}.languages .lang.active{background:var(--ink);color:white}
+.header .languages {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 139px;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 13px;
+}
+
+.header .languages .lang {
+    position: relative;
+
+    width: 28px;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    padding: 12px 0 0;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    line-height: 1;
+
+    text-align: center;
+
+    opacity: .72;
+    transition: opacity .2s ease;
+}
+
+.header .languages .lang::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: var(--sans);
+    font-size: 6px;
+    font-weight: 400;
+    line-height: 1;
+
+    letter-spacing: .22em;
+    color: rgba(24, 32, 52, .62);
+}
+
+.header .languages .lang[data-lang="de"]::before {
+    content: "DE";
+}
+
+.header .languages .lang[data-lang="en"]::before {
+    content: "EN";
+}
+
+.header .languages .lang[data-lang="es"]::before {
+    content: "ES";
+}
+
+.header .languages .lang.active {
+    background: transparent;
+    color: inherit;
+    opacity: 1;
+}
+
+.header .languages .lang:hover {
+    opacity: 1;
+}
+/* SPRACHEN – FLAGGEN MINIMAL GRÖSSER + HÖHER */
+
+@media (min-width: 701px) {
+
+    .header .languages {
+        top: 134px;
+    }
+
+    .header .languages .lang {
+        font-size: 14px;
+    }
+
+}
